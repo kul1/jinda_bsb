@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["P Kul"]
   spec.email         = ["1.0@kul.asia"]
 
-  spec.summary       = %q{Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{description or delete this line.}
+  spec.summary       = %q{Theme AdminBSB for Jinda}
+  spec.description   = %q{Required Jinda installed }
   spec.homepage      = "https://www.github.com/kul1/jinda-bsb"
   spec.license       = "MIT"
 
