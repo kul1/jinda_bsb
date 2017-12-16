@@ -6,10 +6,10 @@ module Jindabsb
     end
 
     def setup_app
-      inside("public") { run "mv index.html index.html.bak" }
       inside("app/views/layouts") { run "mv application.haml application.haml.bak" }
       inside("app/assets/javascripts") { run "mv application.js application.js.bak" }
       inside("app/assets/stylesheets") { run "mv application.scss application.scss.bak" }
+      inside("app/jinda") { run "mv index.mm index.mm.bak"}
     end
 
     def copy_theme
@@ -18,13 +18,14 @@ module Jindabsb
       copy_file "application.haml","app/views/layouts/application.haml"
       copy_file "jindabsb.js","app/assets/javascripts/jindabsb.js"
       copy_file "jindabsb.css","app/assets/stylesheets/jindabsb.css"
+      copy_file "index.mm","app/jinda/index.mm"
 
     end
 
     def finish        
       puts "----------------------------------------\n"
       puts "                                        \n"
-      puts "Jinda-adminbsb theme installation finish\n"
+      puts "Adminbsb theme installation finished\n"
       puts "                                        \n"
       puts "----------------------------------------\n"
     end
