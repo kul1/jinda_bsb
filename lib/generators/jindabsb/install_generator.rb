@@ -14,12 +14,11 @@ module Jindabsb
 
     def copy_theme
       copy_file "application.js","app/assets/javascripts/application.js"
-      copy_file "application.scss","app/assets/stylesheets/application.scss"
-      copy_file "application.haml","app/views/layouts/application.haml"
       copy_file "jindabsb.js","app/assets/javascripts/jindabsb.js"
+      copy_file "application.scss","app/assets/stylesheets/application.scss"
       copy_file "jindabsb.css","app/assets/stylesheets/jindabsb.css"
+      copy_file "application.haml","app/views/layouts/application.haml"
       copy_file "index.mm","app/jinda/index.mm"
-
     end
 
     def finish        
