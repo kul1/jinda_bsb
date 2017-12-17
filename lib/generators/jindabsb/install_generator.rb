@@ -7,9 +7,13 @@ module Jindabsb
 
     def setup_app
       inside("app/views/layouts") { run "mv application.haml application.haml.bak" }
-      inside("app/assets/javascripts") { run "mv application.js application.js.bak" }
-      inside("app/assets/stylesheets") { run "mv application.scss application.scss.bak" }
+      inside("app/views/layouts") { run "mv bsb bsb.bak" }
+      inside("app/assets") { run "mv javascripts javascripts.bak" }
+      inside("app/assets") { run "mv stylesheets stylesheets.bak" }
       inside("app/jinda") { run "mv index.mm index.mm.bak"}
+      directory "app/assets/bsb"
+      directory "app/views/adminbsbs"
+      directory "app/views/layouts/bsb"  
     end
 
     def copy_theme
@@ -18,8 +22,9 @@ module Jindabsb
       copy_file "application.scss","app/assets/stylesheets/application.scss"
       copy_file "jindabsb.css","app/assets/stylesheets/jindabsb.css"
       copy_file "application.haml","app/views/layouts/application.haml"
+      copy_file "adminbsbs_controller.rb","app/controllers/adminbsbs_controller.rb"
       copy_file "index.mm","app/jinda/index.mm"
-    end
+  end
 
     def finish        
       puts "----------------------------------------\n"
