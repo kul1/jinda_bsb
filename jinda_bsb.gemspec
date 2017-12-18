@@ -1,11 +1,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "jinda/bsb/version"
+require "jinda_bsb/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "jinda-bsb"
-  spec.version       = Jinda::Bsb::VERSION
+  spec.name          = "jinda_bsb"
+  spec.version       = JindaBsb::VERSION
   spec.authors       = ["P Kul"]
   spec.email         = ["1.0@kul.asia"]
 

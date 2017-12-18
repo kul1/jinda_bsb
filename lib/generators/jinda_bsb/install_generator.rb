@@ -1,4 +1,4 @@
-module Jindabsb  
+module Jinda_bsb  
   class InstallGenerator < Rails::Generators::Base
     desc "Install jinda adminbsb theme to existing Jinda app "
     def self.source_root
