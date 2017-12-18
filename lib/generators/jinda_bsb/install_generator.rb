@@ -8,10 +8,11 @@ module Jinda_bsb
     def setup_app
       inside("app/views/layouts") { run "mv application.haml application.haml.bak" }
       inside("app/views/layouts") { run "mv bsb bsb.bak" }
+      inside("app/assets") { run "mv jinda_assets ../../tmp/cache" }
       inside("app/assets") { run "mv javascripts javascripts.bak" }
       inside("app/assets") { run "mv stylesheets stylesheets.bak" }
       inside("app/jinda") { run "mv index.mm index.mm.bak"}
-      directory "app/assets/bsb"
+      directory "app/assets/jinda_assets"
       directory "app/views/adminbsbs"
       directory "app/views/layouts/bsb"  
     end
@@ -27,11 +28,14 @@ module Jinda_bsb
   end
 
     def finish        
-      puts "----------------------------------------\n"
-      puts "                                        \n"
-      puts "Adminbsb theme installation finished\n"
-      puts "                                        \n"
-      puts "----------------------------------------\n"
+      puts "------------------------------------------------\n"
+      puts "                                                \n"
+      puts "  Jinda Theme installation finished             \n"
+      puts "  Note: last jinda_assets was move to tmp/cache \n"
+      puts "  To delte run the following command            \n"
+      puts "                                                \n"
+      puts "rake tmp:cache:clear                            \n"
+      puts "------------------------------------------------\n"
     end
   end
 end
